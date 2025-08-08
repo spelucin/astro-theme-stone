@@ -1,40 +1,59 @@
 ---
 const services = [
   {
-    step: '01',
-    name: 'Design',
+    name: 'Implementación y auditoría de Google Analytics 4',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Establezco una base de medición sólida y confiable para tu sitio web, configurando herramientas como Google Analytics 4 y Google Tag Manager con las mejores prácticas. Así te aseguras de contar con datos precisos y útiles desde el principio.',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="4"><path stroke-linejoin="round" d="M44 5H4v12h40V5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m4 41.03l12.176-12.3l6.579 6.3L30.798 27l4.48 4.368"/><path stroke-linecap="round" d="M44 16.172v26m-40-26v14M13.015 43H44M17 11h21m-28-.003h1"/></g></svg>`,
+      link: '#',
   },
   {
-    step: '02',
-    name: 'Develop',
+    name: 'Análisis de datos y reportes',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Analizo el rendimiento de tu sitio y campañas para identificar oportunidades, puntos de fuga y áreas de mejora. Creo reportes automatizados y visuales en Looker Studio que facilitan la toma de decisiones basada en datos reales.',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <g fill="none">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 6v36h36"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M20 24a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm17-8a5 5 0 1 0 0-10a5 5 0 0 0 0 10ZM15 36a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm18-4a3 3 0 1 0 0-6a3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
+    </g>
+</svg>`,
+    link: '#',
   },
   {
-    step: '03',
-    name: 'Maintain',
+    name: 'Google Tag Manager Server-side',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Te ayudo a migrar o implementar Google Tag Manager en modo server-side, mejorando la precisión de la medición, la velocidad de carga y el cumplimiento con políticas de privacidad. Ideal si buscas mayor control sobre tus datos y etiquetas.',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g fill="none"><path stroke="currentColor" stroke-linejoin="round" stroke-width="4" d="M42.17 29.245L29.262 42.151a3.6 3.6 0 0 1-5.094 0L8 26V8h18l16.17 16.17a3.6 3.6 0 0 1 0 5.075Z"/><path fill="currentColor" fill-rule="evenodd" d="M18.5 21a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5Z" clip-rule="evenodd"/></g></svg>`,
+      link: '#',
+  },
+  {
+    name: 'Warehousing con BigQuery y Dataform',
+    description:
+      'Centralizo y modelo tus datos de marketing en BigQuery usando Dataform, creando una capa de datos limpia, estructurada y lista para el análisis. Esto te permite escalar tus reportes, automatizar procesos y tomar decisiones más rápidas con información confiable.',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M34 24H18m6-6l-6 6l6 6"/><circle cx="38" cy="24" r="4"/><path stroke-linecap="round" d="M40.706 13A20.102 20.102 0 0 0 38 9.717A19.935 19.935 0 0 0 24 4C12.954 4 4 12.954 4 24s8.954 20 20 20c5.45 0 10.392-2.18 14-5.717A20.104 20.104 0 0 0 40.706 35"/></g></svg>`,
+      link: '#',
   },
 ];
 ---
 
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-12 sm:gap-16">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
-      <div class="grid gap-8 lg:grid-cols-3">
+    <div class="flex flex-col gap-6 sm:gap-4">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Servicios</h2>
+      
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2">
         {
           services.map((service) => (
             <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-              <p class="text-sm">{service.step}</p>
               <div class="flex flex-col gap-4">
+              <div class="primary-500/10 dark:primary-400/10" set:html={service.icon}></div>
                 <h3 class="text-xl font-medium">{service.name}</h3>
                 <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
                   {service.description}
                 </p>
+                <a href={service.link} class="w-1/4 bg-primary-950 dark:bg-primary-200 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+                Ver más
+                </a>
               </div>
             </div>
           ))

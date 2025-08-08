@@ -10,10 +10,10 @@ module.exports = {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
-      primary: colors.stone,
+      primary: colors.sky,
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Archivo', 'sans-serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
